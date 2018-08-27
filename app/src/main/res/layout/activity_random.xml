@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00007F">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/scoreText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="SCORE: 0"
+        android:gravity="center"
+        android:textColor="#777777"
+        android:textSize="20sp"/>
+
+    <!--Colors are in the order of Purple, White, Blue, Green, Yellow,
+        Orange, Red, Black and Pink-->
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="354dp"
+        android:layout_height="354dp"
+        android:id="@+id/Grid"
+        android:layout_below="@+id/scoreText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:columnCount="3"
+        android:orientation="vertical"
+        android:rowCount="3"
+        android:stretchMode="columnWidth"
+        android:background="#120000">
+
+        <!--Top Left = #1-->
+        <LinearLayout
+            android:id="@+id/container1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/purple_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #2-->
+        <LinearLayout
+            android:id="@+id/container2"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/white_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #3-->
+        <LinearLayout
+            android:id="@+id/container3"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/blue_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #4-->
+        <LinearLayout
+            android:id="@+id/container4"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/green_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #5-->
+        <LinearLayout
+            android:id="@+id/container5"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/yellow_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #6-->
+        <LinearLayout
+            android:id="@+id/container6"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage6"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/orange_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #7-->
+        <LinearLayout
+            android:id="@+id/container7"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage7"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/red_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #8-->
+        <LinearLayout
+            android:id="@+id/container8"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage8"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/black_logo" />
+        </LinearLayout>
+
+        <!--Top Middle = #9-->
+        <LinearLayout
+            android:id="@+id/container9"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:background="@drawable/shape" >
+
+            <ImageView
+                android:id="@+id/myimage9"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/pink_logo" />
+        </LinearLayout>
+    </GridLayout>
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/submitButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/resetButton" />
+    <!--android:background="@drawable/pink_background"-->
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:id="@+id/resetButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   \?   "
+        android:id="@+id/hintButton"
+        android:layout_above="@+id/submitButton"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Tries:"
+        android:textColor="#ff00ff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"
+        android:layout_above="@+id/resetButton"
+        android:layout_marginBottom="39dp"
+        android:layout_marginRight="35dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="#ff0000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/attemptsNumberText"
+        android:layout_above="@+id/resetButton"
+        android:layout_marginBottom="39dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
